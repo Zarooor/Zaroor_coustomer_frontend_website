@@ -1,10 +1,12 @@
+// src/components/SignUp.tsx
+import React, { useState, useEffect } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import "./SignUp.css";
-import { useEffect, useState } from "react";
 
 const schema = z
   .object({
@@ -39,7 +41,7 @@ interface PasswordInputState {
   isVisible: boolean;
 }
 
-const SignUp = () => {
+const SignUp: React.FC = () => {
   const {
     register,
     handleSubmit,
@@ -149,7 +151,7 @@ const SignUp = () => {
             {...register("confirmPassword")}
             type="password"
             className="form-control"
-            id="floatingConfirPmassword"
+            id="floatingConfirmPassword"
             placeholder="Password"
             required
           />
@@ -161,6 +163,9 @@ const SignUp = () => {
         <button className="btn btn-primary" type="submit">
           Register
         </button>
+        <div className="link-to-signin">
+          Already have an account? <Link to="/signin">Sign In</Link>
+        </div>
       </form>
     </div>
   );

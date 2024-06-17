@@ -1,10 +1,12 @@
+// src/components/SignIn.tsx
+import React, { useState, useEffect } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import "./SignUp.css";
-import { useEffect, useState } from "react";
 
 const schema = z.object({
   email: z.string().email({ message: "Enter a valid email" }),
@@ -16,7 +18,7 @@ interface PasswordInputState {
   isVisible: boolean;
 }
 
-const SignIn = () => {
+const SignIn: React.FC = () => {
   const {
     register,
     handleSubmit,
@@ -83,6 +85,9 @@ const SignIn = () => {
         <button className="btn btn-primary" type="submit">
           Sign In
         </button>
+        <div className="link-to-signup">
+          Don't have an account? <Link to="/signup">Sign Up</Link>
+        </div>
       </form>
     </div>
   );
