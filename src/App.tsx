@@ -4,7 +4,7 @@ import SignUp from "./components/SignUp/SignUp";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App() {
-  return <SignIn />;
+  return <SignUp />;
 }
 
 export default App;
