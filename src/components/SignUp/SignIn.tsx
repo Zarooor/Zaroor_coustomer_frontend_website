@@ -82,11 +82,17 @@ const SignIn: React.FC = () => {
           )}
           <label htmlFor="floatingPassword">Password</label>
         </div>
+        <Link className="links forgot-password" to="/">
+          Forgot password?
+        </Link>
         <button className="btn btn-primary" type="submit">
           Sign In
         </button>
         <div className="link-to-signup">
-          Don't have an account? <Link to="/signup">Sign Up</Link>
+          Don't have an account?{" "}
+          <Link className="links" to="/signup">
+            Sign Up
+          </Link>
         </div>
       </form>
     </div>

@@ -164,7 +164,10 @@ const SignUp: React.FC = () => {
           Register
         </button>
         <div className="link-to-signin">
-          Already have an account? <Link to="/signin">Sign In</Link>
+          Already have an account?{" "}
+          <Link className="links" to="/signin">
+            Sign In
+          </Link>
         </div>
       </form>
     </div>

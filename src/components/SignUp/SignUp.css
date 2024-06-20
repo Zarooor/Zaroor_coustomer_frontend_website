@@ -104,3 +104,13 @@
   transform: translateY(-50%);
   cursor: pointer;
 }
+
+.forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.links {
+  text-decoration: none;
+}
